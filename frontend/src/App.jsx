@@ -18,7 +18,18 @@ const App = () => {
 
   return (
     <div>
-      app
+      {user.map((data) => {
+        return <>
+        <div>
+            <h1>name: {data.name}</h1>
+            <h1>Username: {data.username}</h1>
+            <h1>Email: {data.email}</h1>
+
+        </div>
+        
+        
+        </>
+      })}
     </div>
   )
 }
