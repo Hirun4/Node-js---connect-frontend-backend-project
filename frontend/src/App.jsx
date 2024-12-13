@@ -1,5 +1,7 @@
 // import React from 'react'
 
+import { useEffect } from "react"
+
 const App = () => {
 
 
@@ -8,6 +10,10 @@ const App = () => {
     .then(res => res.json())
     .then(json => console.log(json))
   }
+
+  useEffect(() => {
+    getUser()
+  },[])
 
 
   return (
