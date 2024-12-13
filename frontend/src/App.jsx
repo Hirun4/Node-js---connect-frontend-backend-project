@@ -1,14 +1,14 @@
 // import React from 'react'
-
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 const App = () => {
 
+  const [user,setUser] =  useState([])
 
   const getUser = () => {
-    fetch("http://localhost:3000/api/user")
+    fetch("/api/user")
     .then(res => res.json())
-    .then(json => console.log(json))
+    .then(json => setUser(json))
   }
 
   useEffect(() => {
